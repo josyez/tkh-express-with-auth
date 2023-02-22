@@ -1,7 +1,9 @@
 import createServer from "./server.js";
 
-const server = createServer();
+const app = createServer();
 
-server.listen(8080, () => {
+const port = process.env.PORT || 8080
+
+app.listen(port, function () {
   console.log("Server is listening at localhost:8080");
 });
